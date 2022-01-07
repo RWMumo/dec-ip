@@ -40,7 +40,8 @@ function handleClick() {
             alert("please enter a valid answer")
         } else{
         }
-     akanNameFormula(centuryVar, yearVar, birthMonth, birthDay, birthGender);
+     const akanName =akanNameFormula(centuryVar, yearVar, birthMonth, birthDay, birthGender);
+     confirm("Your Akan name is: ${akanName}")
     } else {
         alert("Please enter a valid answer")
     }
