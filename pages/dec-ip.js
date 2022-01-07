@@ -6,11 +6,12 @@ const akanNameFormula = (CC, YY, MM, DD) => {
 
     const maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"]
     const femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"]
+    const daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
     if (gender == "Male") {
-        return maleNames[wholeNumber];
+        return maleNames[wholeNumber], 'day'; daysOfTheWeek[wholeNumber];
     } else {
-        return femaleNames[wholeNumber];
+        return femaleNames[wholeNumber]; 'day'; daysOfTheWeek[wholeNumber]
     }
 
 }
@@ -40,11 +41,11 @@ function handleClick() {
             alert("please enter a valid answer")
         } else {
             const akanName = akanNameFormula(centuryVar, yearVar, birthMonth, birthDay, birthGender);
-            alert('Your name is: ${akanName}')
-
-        } 
-    // else {
-            alert("Please enter a valid answer")
-        }
-
+            alert('Your name is: ${akanName.name} born on ${akanName.day}')
+}
+        // else {
+        alert("Please enter a valid answer")
     }
+
+
+}
