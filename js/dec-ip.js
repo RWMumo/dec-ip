@@ -12,4 +12,14 @@ const handleClick = () => {
     const birthGender = birthdayBox.value;
 
     console.log(birthDay, birthMonth, birthYear, birthGender)
+
+    // enter gender
+    const allGendersArray =["Male, Female"]
+    if(allGendersArray.includes(birthGender)) {
+        const centuryVar = String(birthYear).substring(0 ,2)
+        const yearVar = String(birthYear).substring(2)
+    } else{
+        alert("Please enter a valid answer")
+    }
+
 }
