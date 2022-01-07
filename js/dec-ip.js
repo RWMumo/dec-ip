@@ -4,7 +4,15 @@ const calculationResult = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) +
 const wholeNumber = Number(calculationResult.toFixed())
 console.log(wholeNumber);
 
-const maleNames =()
+const maleNames =["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame" ]
+const femaleNames =["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama" ]
+
+if (gender == "Male") {
+    return maleNames[wholeNumber]
+} else{
+    return femaleNames[wholeNumber]
+}
+
 }
 function handleClick() {
     // user input
@@ -30,10 +38,9 @@ function handleClick() {
             alert("Please enter a valid answer")
         } else if (birthMonth <= 0 || birthMonth > 12){
             alert("please enter a valid answer")
-        }
-
-    //  akanNameFormula(centuryVar, yearVar, birthMonth, birthDay);
-
+        } else
+     akanNameFormula(centuryVar, yearVar, birthMonth, birthDay, birthGender);
+    }
 
     } else {
         alert("Please enter a valid answer")
