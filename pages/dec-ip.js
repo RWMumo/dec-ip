@@ -17,15 +17,15 @@ if (gender == "Male") {
 function handleClick() {
     // user input
     const birthdayBox = document.getElementById("birthDay")
-    const birthdayBox = document.getElementById("birthMonth")
-    const birthdayBox = document.getElementById("birthYear")
-    const birthdayBox = document.getElementById("birthGender")
+    const birthMonthBox = document.getElementById("birthMonth")
+    const birthYearBox = document.getElementById("birthYear")
+    const birthGenderBox = document.getElementById("birthGender")
 
     // get value
     const birthDay = birthdayBox.value
-    const birthMonth = birthdayBox.value
-    const birthYear = birthdayBox.value
-    const birthGender = birthdayBox.value
+    const birthMonth = birthMonthBox.value
+    const birthYear = birthYearBox.value
+    const birthGender = birthGenderBox.value
 
     console.log(birthDay, birthMonth, birthYear, birthGender)
 
