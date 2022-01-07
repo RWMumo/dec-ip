@@ -1,6 +1,10 @@
 // formula
 const akanNameFormula =(CC, YY, MM, DD) => {
-console.log( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7)
+const calculationResult = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7)
+const wholeNumber = Number(calculationResult.toFixed())
+console.log(wholeNumber);
+
+const maleNames =()
 }
 function handleClick() {
     // user input
@@ -22,7 +26,13 @@ function handleClick() {
     if (allGendersArray.includes(birthGender)) {
         const centuryVar = String(birthYear).substring(0, 2)
         const yearVar = String(birthYear).substring(2)
-     akanNameFormula(centuryVar, yearVar, birthMonth, birthDay)
+        if(birthDay <=0 || birthDay>31) {
+            alert("Please enter a valid answer")
+        } else if (birthMonth <= 0 || birthMonth > 12){
+            alert("please enter a valid answer")
+        }
+
+    //  akanNameFormula(centuryVar, yearVar, birthMonth, birthDay);
 
 
     } else {
