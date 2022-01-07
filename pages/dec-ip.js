@@ -1,17 +1,17 @@
 // formula
-const akanNameFormula =(CC, YY, MM, DD) => {
-const calculationResult = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7
-const wholeNumber = Number(calculationResult.toFixed())
-console.log(wholeNumber);
+const akanNameFormula = (CC, YY, MM, DD) => {
+    const calculationResult = (((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7
+    const wholeNumber = Number(calculationResult.toFixed())
+    console.log(wholeNumber);
 
-const maleNames =["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame" ]
-const femaleNames =["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama" ]
+    const maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"]
+    const femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"]
 
-if (gender == "Male") {
-    return maleNames[wholeNumber]
-} else{
-    return femaleNames[wholeNumber]
-}
+    if (gender == "Male") {
+        return maleNames[wholeNumber];
+    } else {
+        return femaleNames[wholeNumber];
+    }
 
 }
 function handleClick() {
@@ -34,15 +34,17 @@ function handleClick() {
     if (allGendersArray.includes(birthGender)) {
         const centuryVar = String(birthYear).substring(0, 2)
         const yearVar = String(birthYear).substring(2)
-        if(birthDay <=0 || birthDay>31) {
+        if (birthDay <= 0 || birthDay > 31) {
             alert("Please enter a valid answer")
-        } else if (birthMonth <= 0 || birthMonth > 12){
+        } else if (birthMonth <= 0 || birthMonth > 12) {
             alert("please enter a valid answer")
-        } else
-     akanNameFormula(centuryVar, yearVar, birthMonth, birthDay, birthGender);
-    } 
-    else {
-        alert("Please enter a valid answer")
-    }
+        } else {
+            const akanName = akanNameFormula(centuryVar, yearVar, birthMonth, birthDay, birthGender);
+            alert('Your name is: ${akanName}')
 
-}
+        } 
+    // else {
+            alert("Please enter a valid answer")
+        }
+
+    }
