@@ -40,7 +40,8 @@ function handleClick() {
             alert("please enter a valid answer")
         } else
      akanNameFormula(centuryVar, yearVar, birthMonth, birthDay, birthGender);
-    } else {
+    } 
+    else {
         alert("Please enter a valid answer")
     }
 
