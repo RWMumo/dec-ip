@@ -38,7 +38,8 @@ function handleClick() {
             alert("Please enter a valid answer")
         } else if (birthMonth <= 0 || birthMonth > 12){
             alert("please enter a valid answer")
-        } else
+        } else{
+        }
      akanNameFormula(centuryVar, yearVar, birthMonth, birthDay, birthGender);
     } else {
         alert("Please enter a valid answer")
