@@ -1,28 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/dec-ip.css">
-    <script src="pages/dec-ip.js"></script>
-    <title>Document</title>
+    <meta charset="utf-8">
+    <title>Akan Calculator</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/dec-ip.css"
 </head>
 
-<h1>Do you know your Akan name?</h1>
-<p>Find out below </p>
-
 <body>
-    <form>
-        <input type="text" id="birthDay">
-        <input type="text" id="birthMonth">
-        <input type="text" id="birthYear">
-        <input type="text" id="birthGender">
-    </form>
-    <button type="submit" onclick="handleClick()">Submit</button>
-    <p id="resultHere">Your answer</p>
-    
+    <div class="content">
+        <div class="container">
+            <h1>DO YOU KNOW YOUR AKAN NAME?</h1>
+            <P>Fill in the form, with your date of birth, to find out.</P>
+            <form class="myform" onsubmit="return getAkanName()">
+                <label for="year-of-birth">
+                    Year:
+                    <input id="year-input" type="number" name="year-of-birth" placeholder="YYYY" value="" required>
+                </label>
+                <label for="month-of-birth">
+                    Month:
+                    <input id="month-input" type="number" name="month-of-birth" placeholder="MM" value="" required>
+                </label>
+                <label for="day-of-birth">
+                    Day:
+                    <input id="day-input" type="number" name="day-of-birth" placeholder="DD" value="" required>
+                </label>
+                <br>
+                <label for="gender">
+                    <p>Select your gender: </p>
+                    Male
+                    <input id="male-input" type="radio" name="gender" value="male" required>
+                    Female
+                    <input id="female-input" type="radio" name="gender" value="female" required>
+
+                </label>
+                <br><br>
+                <input id="get-name" type="submit" name="" value="Get name">
+                <br><br>
+            </form>
+            <form onsubmit="return startOver()">
+                <input class="startOver" type="submit" value="Start Over">
+            </form>
+
+
+            <h4 id=display-name><strong>Your Akan name is:</strong></h4>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script src="js/dec-ip.js"></script>
+    <script src="js/names.js"></script>
+
 </body>
 
 </html>
